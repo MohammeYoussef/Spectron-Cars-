@@ -8,6 +8,11 @@
   text-transform: capitalize;
 }
 
+.ahmed {
+  background-color: yellow;
+  width: 50px;
+  aspect-ratio: 1;
+}
 /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
 /* .triangle {
@@ -68,7 +73,8 @@ body {
 }
 
 .header-main .header-right .login,
-.register {
+.register,
+.dashboard_btn {
   color: white;
   border-radius: 10px;
   padding: 4px 7px;
@@ -204,7 +210,8 @@ body {
 
 .body-main #sub-text {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 350;
+  color: black;
 }
 
 /* ////////////////////////////////////////////////////// */
@@ -1182,6 +1189,8 @@ body {
   padding: 30px;
   /* margin: 0px 50px; */
   background-color: #f9f9f9;
+  background-color: blue;
+  height: fit-content;
   border: 1px solid #eaeaea;
   border-radius: 5px;
 }
@@ -1270,21 +1279,22 @@ select {
 /* //////////Listing popularListing2//////////// */
 .popular-main2 {
   /* background-image: url(../src/images/popular-listing/popular-listing.png); */
-
-  /* background-color: red; */
+  background-color: red;
+  height: 916px;
 }
 
 .popular-main2 .card-container2 {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 40px;
   padding: 50px;
 }
 
 .pop-card-main2 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 50px;
+  background-color: darkgray;
 }
 
 .pop-card-main2 .container2 {

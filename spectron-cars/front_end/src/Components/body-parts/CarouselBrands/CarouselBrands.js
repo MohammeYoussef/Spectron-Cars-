@@ -1,6 +1,6 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-multi-carousel"; // Carousel
+import "react-multi-carousel/lib/styles.css"; //Carousel
 import carLogos from "./images";
 
 export default function CarouselBrands() {

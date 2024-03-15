@@ -13,14 +13,14 @@ import Margin from "./Components/static-parts/margin";
 import OurAwesomTeam from "./Components/Pages/OurAwesomeTeam";
 import Footer from "./Components/footer-parts/footer/footer";
 // import CarTopology from "./Components/body-parts/CarTopoloy";
-import RequestHelp from "./Components/body-parts/requesthelp";
+import RequestHelp from "./Components/Pages/requesthelp";
 // import TempSlide from "./Components/body-parts/tempCard";
 import Dashboard from "./Components/body-parts/dashboard";
-import Listing from "./Components/body-parts/listing";
+import Listing from "./Components/Pages/listing";
 function App() {
   return (
     <div className="app-main">
-      <TopPart />
+      {/* <TopPart /> */}
       <Margin />
 
       <ScrollToTop />

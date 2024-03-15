@@ -25,15 +25,6 @@ export default function Nav() {
               window.scrollTo(0, 0);
             }}
             className="nav-li"
-            to="/dashboard"
-          >
-            dashboard
-          </NavLink>
-          <NavLink
-            onClick={() => {
-              window.scrollTo(0, 0);
-            }}
-            className="nav-li"
             to="/listing"
           >
             Listing

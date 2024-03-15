@@ -1,15 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "../../fontawesome";
-import PopularListing2 from "./popularListing2";
-import popListingData from "./pop-listing-data";
+import CarsListing from "../body-parts/CarsListing";
+import popListingData from "../body-parts/pop-listing-data";
 import axios from "axios";
-
-const handleSubmit = (event) => {
-  event.preventDefault();
-
-  // TODO: Submit the search form to your API
-};
 
 export default function Listing() {
   const [keyword, setKeyword] = React.useState("");
@@ -76,6 +70,12 @@ export default function Listing() {
     };
     fetchAllMake();
   }, []);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // TODO: Submit the search form to your API
+  };
 
   const handleChange = (event) => {
     const { name, value, checked } = event.target;
@@ -274,7 +274,8 @@ export default function Listing() {
           <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> Search
         </button>
       </form>
-      <PopularListing2
+
+      <CarsListing
         keyword={keyword}
         condition={condition}
         make={make}

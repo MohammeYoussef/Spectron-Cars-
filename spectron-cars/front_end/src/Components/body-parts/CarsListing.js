@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import popListingData from "./pop-listing-data";
 import axios from "axios"; //(for making HTTP requests)
+import Carousel from "react-multi-carousel"; // Carousel
+import "react-multi-carousel/lib/styles.css"; //Carousel
+
 function Cards(props) {
   return (
     <div className="pop-card-main2">
@@ -69,7 +72,25 @@ function Cards(props) {
     </div>
   );
 }
-export default function PopularListing2(props) {
+export default function CarsListing(props) {
+  // for the carousel
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 6,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 5,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
   // const filterItmes = popListingData.filter(curdata =>
   //     curdata.name.toLocaleLowerCase().indexOf(props.keyword.toLocaleLowerCase() !== -1)
   // )
@@ -115,7 +136,29 @@ export default function PopularListing2(props) {
 
   return (
     <div className="popular-main2">
-      <div className="card-container2">{Dynamic_card}</div>
+      <div className="card-container2">
+        <Carousel
+          draggable={false}
+          showDots={false}
+          itemClass="ahmed"
+          containerClass="Carousel_container"
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={1000}
+          // centerMode={true}
+          arrows={true}
+          // customDot={ol}
+          // ssr={true} // means to render carousel on server-side.
+          // transitionDuration={500}
+          // containerClass="carousel-container"
+          // removeArrowOnDeviceType={["tablet", "mobile"]}
+          // deviceType={this.props.deviceType}
+          // dotListClass="custom-dot-list-style"
+        >
+          {Dynamic_card}
+        </Carousel>
+      </div>
     </div>
   );
 }
